@@ -1,7 +1,7 @@
 export default {
   props: {
     checked: {
-      required: true
+      required: false
     },
     disabled: {
       required: false
@@ -13,7 +13,7 @@ export default {
   },
   methods: {
     fireChange: function (event) {
-      this.$emit('change', event)
+      this.$emit('input', event.target.checked)
     }
   }
 }
