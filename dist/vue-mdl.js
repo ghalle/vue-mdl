@@ -59,7 +59,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
-	exports.MdlChip = exports.MdlTab = exports.MdlTabs = exports.MdlDialog = exports.MdlSelect = exports.MdlSnackbar = exports.MdlCard = exports.MdlMenuItem = exports.MdlMenu = exports.MdlTooltip = exports.MdlTextfield = exports.MdlSlider = exports.MdlSpinner = exports.MdlProgress = exports.MdlAnchorButton = exports.MdlButton = exports.MdlIconToggle = exports.MdlRadio = exports.MdlSwitch = exports.MdlBadge = exports.MdlCheckbox = exports.Mdl = exports.directives = exports.components = undefined;
+	exports.MdlLayoutContent = exports.MdlLayoutDrawer = exports.MdlLayoutHeaderRow = exports.MdlLayout = exports.MdlChip = exports.MdlTab = exports.MdlTabs = exports.MdlDialog = exports.MdlSelect = exports.MdlSnackbar = exports.MdlCard = exports.MdlMenuItem = exports.MdlMenu = exports.MdlTooltip = exports.MdlTextfield = exports.MdlSlider = exports.MdlSpinner = exports.MdlProgress = exports.MdlAnchorButton = exports.MdlButton = exports.MdlIconToggle = exports.MdlRadio = exports.MdlSwitch = exports.MdlBadge = exports.MdlCheckbox = exports.Mdl = exports.directives = exports.components = undefined;
 	
 	var _keys = __webpack_require__(1);
 	
@@ -153,6 +153,22 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _chip2 = _interopRequireDefault(_chip);
 	
+	var _layout = __webpack_require__(118);
+	
+	var _layout2 = _interopRequireDefault(_layout);
+	
+	var _headerRow = __webpack_require__(121);
+	
+	var _headerRow2 = _interopRequireDefault(_headerRow);
+	
+	var _drawer = __webpack_require__(124);
+	
+	var _drawer2 = _interopRequireDefault(_drawer);
+	
+	var _content = __webpack_require__(127);
+	
+	var _content2 = _interopRequireDefault(_content);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	var components = exports.components = {
@@ -176,7 +192,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	  MdlTabs: _tabs2.default,
 	  MdlTab: _tab2.default,
 	  MdlBadge: _badge2.default,
-	  MdlChip: _chip2.default
+	  MdlChip: _chip2.default,
+	  MdlLayout: _layout2.default,
+	  MdlLayoutHeaderRow: _headerRow2.default,
+	  MdlLayoutDrawer: _drawer2.default,
+	  MdlLayoutContent: _content2.default
 	};
 	
 	var directives = exports.directives = {
@@ -215,6 +235,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.MdlTabs = _tabs2.default;
 	exports.MdlTab = _tab2.default;
 	exports.MdlChip = _chip2.default;
+	exports.MdlLayout = _layout2.default;
+	exports.MdlLayoutHeaderRow = _headerRow2.default;
+	exports.MdlLayoutDrawer = _drawer2.default;
+	exports.MdlLayoutContent = _content2.default;
 
 /***/ },
 /* 1 */
@@ -729,7 +753,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	if (typeof __vue_options__ === "function") {
 	  __vue_options__ = __vue_options__.options
 	}
-	__vue_options__.__file = "/Users/posva/vue-mdl/src/toggles/checkbox.vue"
+	__vue_options__.__file = "F:\\programming\\github\\vue-mdl\\src\\toggles\\checkbox.vue"
 	__vue_options__.render = __vue_template__.render
 	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 	
@@ -740,9 +764,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	  if (!hotAPI.compatible) return
 	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord("data-v-59130e27", __vue_options__)
+	    hotAPI.createRecord("data-v-1c463542", __vue_options__)
 	  } else {
-	    hotAPI.reload("data-v-59130e27", __vue_options__)
+	    hotAPI.reload("data-v-1c463542", __vue_options__)
 	  }
 	})()}
 	if (__vue_options__.functional) {console.error("[vue-loader] checkbox.vue: functional components are not supported and should be defined in plain js files using render functions.")}
@@ -829,7 +853,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 40 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._c;
+	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
 	  return _c('label', {
 	    staticClass: "mdl-checkbox mdl-js-checkbox is-upgraded",
 	    class: _vm.cssClasses,
@@ -851,7 +875,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    },
 	    domProps: {
 	      "value": _vm.val,
-	      "checked": Array.isArray(_vm.checked) ? _vm._i(_vm.checked, _vm.val) > -1 : _vm._q(_vm.checked, true)
+	      "checked": Array.isArray(_vm.checked) ? _vm._i(_vm.checked, _vm.val) > -1 : (_vm.checked)
 	    },
 	    on: {
 	      "change": [function($event) {
@@ -873,13 +897,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }
 	  }), _vm._v(" "), _c('span', {
 	    staticClass: "mdl-checkbox__label"
-	  }, [_vm._t("default")], true)])
+	  }, [_vm._t("default")], 2)])
 	},staticRenderFns: []}
 	module.exports.render._withStripped = true
 	if (false) {
 	  module.hot.accept()
 	  if (module.hot.data) {
-	     require("vue-hot-reload-api").rerender("data-v-59130e27", module.exports)
+	     require("vue-hot-reload-api").rerender("data-v-1c463542", module.exports)
 	  }
 	}
 
@@ -906,7 +930,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	if (typeof __vue_options__ === "function") {
 	  __vue_options__ = __vue_options__.options
 	}
-	__vue_options__.__file = "/Users/posva/vue-mdl/src/toggles/radio.vue"
+	__vue_options__.__file = "F:\\programming\\github\\vue-mdl\\src\\toggles\\radio.vue"
 	__vue_options__.render = __vue_template__.render
 	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 	
@@ -917,9 +941,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	  if (!hotAPI.compatible) return
 	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord("data-v-3842db47", __vue_options__)
+	    hotAPI.createRecord("data-v-c940fbe8", __vue_options__)
 	  } else {
-	    hotAPI.reload("data-v-3842db47", __vue_options__)
+	    hotAPI.reload("data-v-c940fbe8", __vue_options__)
 	  }
 	})()}
 	if (__vue_options__.functional) {console.error("[vue-loader] radio.vue: functional components are not supported and should be defined in plain js files using render functions.")}
@@ -981,7 +1005,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 43 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._c;
+	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
 	  return _c('label', {
 	    staticClass: "mdl-radio mdl-js-radio is-upgraded",
 	    class: _vm.cssClasses,
@@ -1013,13 +1037,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }
 	  }), _vm._v(" "), _c('span', {
 	    staticClass: "mdl-radio__label"
-	  }, [_vm._t("default")], true)])
+	  }, [_vm._t("default")], 2)])
 	},staticRenderFns: []}
 	module.exports.render._withStripped = true
 	if (false) {
 	  module.hot.accept()
 	  if (module.hot.data) {
-	     require("vue-hot-reload-api").rerender("data-v-3842db47", module.exports)
+	     require("vue-hot-reload-api").rerender("data-v-c940fbe8", module.exports)
 	  }
 	}
 
@@ -1110,7 +1134,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	if (typeof __vue_options__ === "function") {
 	  __vue_options__ = __vue_options__.options
 	}
-	__vue_options__.__file = "/Users/posva/vue-mdl/src/button.vue"
+	__vue_options__.__file = "F:\\programming\\github\\vue-mdl\\src\\button.vue"
 	__vue_options__.render = __vue_template__.render
 	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 	
@@ -1121,9 +1145,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	  if (!hotAPI.compatible) return
 	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord("data-v-22205eb4", __vue_options__)
+	    hotAPI.createRecord("data-v-07d86494", __vue_options__)
 	  } else {
-	    hotAPI.reload("data-v-22205eb4", __vue_options__)
+	    hotAPI.reload("data-v-07d86494", __vue_options__)
 	  }
 	})()}
 	if (__vue_options__.functional) {console.error("[vue-loader] button.vue: functional components are not supported and should be defined in plain js files using render functions.")}
@@ -1196,7 +1220,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 48 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._c;
+	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
 	  return _c('button', {
 	    staticClass: "mdl-button mdl-js-button",
 	    class: _vm.cssClasses,
@@ -1205,13 +1229,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }
 	  }, [_vm._t("default", [(_vm.isIconSpecified) ? _c('i', {
 	    staticClass: "material-icons"
-	  }, [_vm._v(_vm._s(_vm.icon))]) : _vm._e()])], true)
+	  }, [_vm._v(_vm._s(_vm.icon))]) : _vm._e()])], 2)
 	},staticRenderFns: []}
 	module.exports.render._withStripped = true
 	if (false) {
 	  module.hot.accept()
 	  if (module.hot.data) {
-	     require("vue-hot-reload-api").rerender("data-v-22205eb4", module.exports)
+	     require("vue-hot-reload-api").rerender("data-v-07d86494", module.exports)
 	  }
 	}
 
@@ -1238,7 +1262,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	if (typeof __vue_options__ === "function") {
 	  __vue_options__ = __vue_options__.options
 	}
-	__vue_options__.__file = "/Users/posva/vue-mdl/src/anchor-button.vue"
+	__vue_options__.__file = "F:\\programming\\github\\vue-mdl\\src\\anchor-button.vue"
 	__vue_options__.render = __vue_template__.render
 	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 	
@@ -1249,9 +1273,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	  if (!hotAPI.compatible) return
 	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord("data-v-7979d0f4", __vue_options__)
+	    hotAPI.createRecord("data-v-3576dbd8", __vue_options__)
 	  } else {
-	    hotAPI.reload("data-v-7979d0f4", __vue_options__)
+	    hotAPI.reload("data-v-3576dbd8", __vue_options__)
 	  }
 	})()}
 	if (__vue_options__.functional) {console.error("[vue-loader] anchor-button.vue: functional components are not supported and should be defined in plain js files using render functions.")}
@@ -1283,7 +1307,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 51 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._c;
+	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
 	  return _c('a', {
 	    staticClass: "mdl-button mdl-js-button",
 	    class: _vm.cssClasses,
@@ -1292,13 +1316,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }
 	  }, [_vm._t("default", [(_vm.isIconSpecified) ? _c('i', {
 	    staticClass: "material-icons"
-	  }, [_vm._v(_vm._s(_vm.icon))]) : _vm._e()])], true)
+	  }, [_vm._v(_vm._s(_vm.icon))]) : _vm._e()])], 2)
 	},staticRenderFns: []}
 	module.exports.render._withStripped = true
 	if (false) {
 	  module.hot.accept()
 	  if (module.hot.data) {
-	     require("vue-hot-reload-api").rerender("data-v-7979d0f4", module.exports)
+	     require("vue-hot-reload-api").rerender("data-v-3576dbd8", module.exports)
 	  }
 	}
 
@@ -1325,7 +1349,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	if (typeof __vue_options__ === "function") {
 	  __vue_options__ = __vue_options__.options
 	}
-	__vue_options__.__file = "/Users/posva/vue-mdl/src/progress.vue"
+	__vue_options__.__file = "F:\\programming\\github\\vue-mdl\\src\\progress.vue"
 	__vue_options__.render = __vue_template__.render
 	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 	
@@ -1336,9 +1360,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	  if (!hotAPI.compatible) return
 	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord("data-v-235def21", __vue_options__)
+	    hotAPI.createRecord("data-v-b71d80e2", __vue_options__)
 	  } else {
-	    hotAPI.reload("data-v-235def21", __vue_options__)
+	    hotAPI.reload("data-v-b71d80e2", __vue_options__)
 	  }
 	})()}
 	if (__vue_options__.functional) {console.error("[vue-loader] progress.vue: functional components are not supported and should be defined in plain js files using render functions.")}
@@ -1390,7 +1414,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 54 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._c;
+	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
 	  return _c('div', {
 	    staticClass: "mdl-progress mdl-js-progress",
 	    class: {
@@ -1402,7 +1426,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	if (false) {
 	  module.hot.accept()
 	  if (module.hot.data) {
-	     require("vue-hot-reload-api").rerender("data-v-235def21", module.exports)
+	     require("vue-hot-reload-api").rerender("data-v-b71d80e2", module.exports)
 	  }
 	}
 
@@ -1429,7 +1453,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	if (typeof __vue_options__ === "function") {
 	  __vue_options__ = __vue_options__.options
 	}
-	__vue_options__.__file = "/Users/posva/vue-mdl/src/spinner.vue"
+	__vue_options__.__file = "F:\\programming\\github\\vue-mdl\\src\\spinner.vue"
 	__vue_options__.render = __vue_template__.render
 	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 	
@@ -1440,9 +1464,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	  if (!hotAPI.compatible) return
 	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord("data-v-04226856", __vue_options__)
+	    hotAPI.createRecord("data-v-0218b5a7", __vue_options__)
 	  } else {
-	    hotAPI.reload("data-v-04226856", __vue_options__)
+	    hotAPI.reload("data-v-0218b5a7", __vue_options__)
 	  }
 	})()}
 	if (__vue_options__.functional) {console.error("[vue-loader] spinner.vue: functional components are not supported and should be defined in plain js files using render functions.")}
@@ -1476,7 +1500,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 57 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._c;
+	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
 	  return _c('div', {
 	    staticClass: "mdl-spinner mdl-js-spinner",
 	    class: {
@@ -1488,7 +1512,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	if (false) {
 	  module.hot.accept()
 	  if (module.hot.data) {
-	     require("vue-hot-reload-api").rerender("data-v-04226856", module.exports)
+	     require("vue-hot-reload-api").rerender("data-v-0218b5a7", module.exports)
 	  }
 	}
 
@@ -1515,7 +1539,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	if (typeof __vue_options__ === "function") {
 	  __vue_options__ = __vue_options__.options
 	}
-	__vue_options__.__file = "/Users/posva/vue-mdl/src/toggles/icon-toggle.vue"
+	__vue_options__.__file = "F:\\programming\\github\\vue-mdl\\src\\toggles\\icon-toggle.vue"
 	__vue_options__.render = __vue_template__.render
 	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 	
@@ -1526,9 +1550,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	  if (!hotAPI.compatible) return
 	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord("data-v-15cede18", __vue_options__)
+	    hotAPI.createRecord("data-v-da67600e", __vue_options__)
 	  } else {
-	    hotAPI.reload("data-v-15cede18", __vue_options__)
+	    hotAPI.reload("data-v-da67600e", __vue_options__)
 	  }
 	})()}
 	if (__vue_options__.functional) {console.error("[vue-loader] icon-toggle.vue: functional components are not supported and should be defined in plain js files using render functions.")}
@@ -1570,7 +1594,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 60 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._c;
+	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
 	  return _c('label', {
 	    staticClass: "mdl-icon-toggle mdl-js-icon-toggle is-upgraded",
 	    class: _vm.cssClasses,
@@ -1592,7 +1616,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    },
 	    domProps: {
 	      "value": _vm.val,
-	      "checked": Array.isArray(_vm.checked) ? _vm._i(_vm.checked, _vm.val) > -1 : _vm._q(_vm.checked, true)
+	      "checked": Array.isArray(_vm.checked) ? _vm._i(_vm.checked, _vm.val) > -1 : (_vm.checked)
 	    },
 	    on: {
 	      "change": [function($event) {
@@ -1620,7 +1644,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	if (false) {
 	  module.hot.accept()
 	  if (module.hot.data) {
-	     require("vue-hot-reload-api").rerender("data-v-15cede18", module.exports)
+	     require("vue-hot-reload-api").rerender("data-v-da67600e", module.exports)
 	  }
 	}
 
@@ -1647,7 +1671,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	if (typeof __vue_options__ === "function") {
 	  __vue_options__ = __vue_options__.options
 	}
-	__vue_options__.__file = "/Users/posva/vue-mdl/src/slider.vue"
+	__vue_options__.__file = "F:\\programming\\github\\vue-mdl\\src\\slider.vue"
 	__vue_options__.render = __vue_template__.render
 	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 	
@@ -1658,9 +1682,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	  if (!hotAPI.compatible) return
 	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord("data-v-1b7fb2d5", __vue_options__)
+	    hotAPI.createRecord("data-v-346846c3", __vue_options__)
 	  } else {
-	    hotAPI.reload("data-v-1b7fb2d5", __vue_options__)
+	    hotAPI.reload("data-v-346846c3", __vue_options__)
 	  }
 	})()}
 	if (__vue_options__.functional) {console.error("[vue-loader] slider.vue: functional components are not supported and should be defined in plain js files using render functions.")}
@@ -1740,7 +1764,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 63 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._c;
+	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
 	  return _c('div', {
 	    staticClass: "mdl-slider__container"
 	  }, [_c('input', {
@@ -1782,7 +1806,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	if (false) {
 	  module.hot.accept()
 	  if (module.hot.data) {
-	     require("vue-hot-reload-api").rerender("data-v-1b7fb2d5", module.exports)
+	     require("vue-hot-reload-api").rerender("data-v-346846c3", module.exports)
 	  }
 	}
 
@@ -1809,7 +1833,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	if (typeof __vue_options__ === "function") {
 	  __vue_options__ = __vue_options__.options
 	}
-	__vue_options__.__file = "/Users/posva/vue-mdl/src/toggles/switch.vue"
+	__vue_options__.__file = "F:\\programming\\github\\vue-mdl\\src\\toggles\\switch.vue"
 	__vue_options__.render = __vue_template__.render
 	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 	
@@ -1820,9 +1844,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	  if (!hotAPI.compatible) return
 	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord("data-v-83b727d0", __vue_options__)
+	    hotAPI.createRecord("data-v-82c6c41a", __vue_options__)
 	  } else {
-	    hotAPI.reload("data-v-83b727d0", __vue_options__)
+	    hotAPI.reload("data-v-82c6c41a", __vue_options__)
 	  }
 	})()}
 	if (__vue_options__.functional) {console.error("[vue-loader] switch.vue: functional components are not supported and should be defined in plain js files using render functions.")}
@@ -1858,7 +1882,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 66 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._c;
+	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
 	  return _c('label', {
 	    staticClass: "mdl-switch mdl-js-switch is-upgraded",
 	    class: _vm.cssClasses,
@@ -1880,7 +1904,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    },
 	    domProps: {
 	      "value": _vm.val,
-	      "checked": Array.isArray(_vm.checked) ? _vm._i(_vm.checked, _vm.val) > -1 : _vm._q(_vm.checked, true)
+	      "checked": Array.isArray(_vm.checked) ? _vm._i(_vm.checked, _vm.val) > -1 : (_vm.checked)
 	    },
 	    on: {
 	      "change": [function($event) {
@@ -1902,13 +1926,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }
 	  }), _vm._v(" "), _c('span', {
 	    staticClass: "mdl-switch__label"
-	  }, [_vm._t("default")], true)])
+	  }, [_vm._t("default")], 2)])
 	},staticRenderFns: []}
 	module.exports.render._withStripped = true
 	if (false) {
 	  module.hot.accept()
 	  if (module.hot.data) {
-	     require("vue-hot-reload-api").rerender("data-v-83b727d0", module.exports)
+	     require("vue-hot-reload-api").rerender("data-v-82c6c41a", module.exports)
 	  }
 	}
 
@@ -1935,7 +1959,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	if (typeof __vue_options__ === "function") {
 	  __vue_options__ = __vue_options__.options
 	}
-	__vue_options__.__file = "/Users/posva/vue-mdl/src/textfield.vue"
+	__vue_options__.__file = "F:\\programming\\github\\vue-mdl\\src\\textfield.vue"
 	__vue_options__.render = __vue_template__.render
 	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 	
@@ -1946,9 +1970,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	  if (!hotAPI.compatible) return
 	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord("data-v-00ca46a9", __vue_options__)
+	    hotAPI.createRecord("data-v-bbbdf80a", __vue_options__)
 	  } else {
-	    hotAPI.reload("data-v-00ca46a9", __vue_options__)
+	    hotAPI.reload("data-v-bbbdf80a", __vue_options__)
 	  }
 	})()}
 	if (__vue_options__.functional) {console.error("[vue-loader] textfield.vue: functional components are not supported and should be defined in plain js files using render functions.")}
@@ -2041,7 +2065,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 69 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._c;
+	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
 	  return _c('div', {
 	    staticClass: "mdl-textfield mdl-js-textfield",
 	    class: {
@@ -2093,20 +2117,20 @@ return /******/ (function(modules) { // webpackBootstrap
 	    on: {
 	      "input": _vm.fireInputEvent
 	    }
-	  })]), _vm._v(" "), _vm._v(" "), _vm._t("label", [_c('label', {
+	  })]), _vm._v(" "), _vm._t("label", [(_vm.displayLabel) ? _c('label', {
 	    staticClass: "mdl-textfield__label",
 	    attrs: {
 	      "for": _vm.id
 	    }
-	  }, [_vm._v(_vm._s(_vm.displayLabel))])]), _vm._v(" "), _vm._t("error", [(_vm.error) ? _c('label', {
+	  }, [_vm._v(_vm._s(_vm.displayLabel))]) : _vm._e()]), _vm._v(" "), _vm._t("error", [(_vm.error) ? _c('label', {
 	    staticClass: "mdl-textfield__error"
-	  }, [_vm._v(_vm._s(_vm.error))]) : _vm._e()])], true)], true)
+	  }, [_vm._v(_vm._s(_vm.error))]) : _vm._e()])], 2)], 2)
 	},staticRenderFns: []}
 	module.exports.render._withStripped = true
 	if (false) {
 	  module.hot.accept()
 	  if (module.hot.data) {
-	     require("vue-hot-reload-api").rerender("data-v-00ca46a9", module.exports)
+	     require("vue-hot-reload-api").rerender("data-v-bbbdf80a", module.exports)
 	  }
 	}
 
@@ -2133,7 +2157,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	if (typeof __vue_options__ === "function") {
 	  __vue_options__ = __vue_options__.options
 	}
-	__vue_options__.__file = "/Users/posva/vue-mdl/src/tooltip.vue"
+	__vue_options__.__file = "F:\\programming\\github\\vue-mdl\\src\\tooltip.vue"
 	__vue_options__.render = __vue_template__.render
 	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 	
@@ -2144,9 +2168,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	  if (!hotAPI.compatible) return
 	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord("data-v-e7023682", __vue_options__)
+	    hotAPI.createRecord("data-v-deae62de", __vue_options__)
 	  } else {
-	    hotAPI.reload("data-v-e7023682", __vue_options__)
+	    hotAPI.reload("data-v-deae62de", __vue_options__)
 	  }
 	})()}
 	if (__vue_options__.functional) {console.error("[vue-loader] tooltip.vue: functional components are not supported and should be defined in plain js files using render functions.")}
@@ -2180,7 +2204,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 72 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._c;
+	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
 	  return _c('div', {
 	    staticClass: "mdl-tooltip",
 	    class: {
@@ -2189,13 +2213,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	    attrs: {
 	      "for": _vm.target
 	    }
-	  }, [_vm._t("default")], true)
+	  }, [_vm._t("default")], 2)
 	},staticRenderFns: []}
 	module.exports.render._withStripped = true
 	if (false) {
 	  module.hot.accept()
 	  if (module.hot.data) {
-	     require("vue-hot-reload-api").rerender("data-v-e7023682", module.exports)
+	     require("vue-hot-reload-api").rerender("data-v-deae62de", module.exports)
 	  }
 	}
 
@@ -2222,7 +2246,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	if (typeof __vue_options__ === "function") {
 	  __vue_options__ = __vue_options__.options
 	}
-	__vue_options__.__file = "/Users/posva/vue-mdl/src/menu/menu.vue"
+	__vue_options__.__file = "F:\\programming\\github\\vue-mdl\\src\\menu\\menu.vue"
 	__vue_options__.render = __vue_template__.render
 	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 	
@@ -2233,9 +2257,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	  if (!hotAPI.compatible) return
 	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord("data-v-67b9a9cb", __vue_options__)
+	    hotAPI.createRecord("data-v-1917ea4a", __vue_options__)
 	  } else {
-	    hotAPI.reload("data-v-67b9a9cb", __vue_options__)
+	    hotAPI.reload("data-v-1917ea4a", __vue_options__)
 	  }
 	})()}
 	if (__vue_options__.functional) {console.error("[vue-loader] menu.vue: functional components are not supported and should be defined in plain js files using render functions.")}
@@ -2263,19 +2287,19 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 75 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._c;
+	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
 	  return _c('ul', {
 	    staticClass: "mdl-menu mdl-js-menu",
 	    attrs: {
 	      "for": _vm.target
 	    }
-	  }, [_vm._t("default")], true)
+	  }, [_vm._t("default")], 2)
 	},staticRenderFns: []}
 	module.exports.render._withStripped = true
 	if (false) {
 	  module.hot.accept()
 	  if (module.hot.data) {
-	     require("vue-hot-reload-api").rerender("data-v-67b9a9cb", module.exports)
+	     require("vue-hot-reload-api").rerender("data-v-1917ea4a", module.exports)
 	  }
 	}
 
@@ -2302,7 +2326,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	if (typeof __vue_options__ === "function") {
 	  __vue_options__ = __vue_options__.options
 	}
-	__vue_options__.__file = "/Users/posva/vue-mdl/src/menu/menu-item.vue"
+	__vue_options__.__file = "F:\\programming\\github\\vue-mdl\\src\\menu\\menu-item.vue"
 	__vue_options__.render = __vue_template__.render
 	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 	
@@ -2313,9 +2337,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	  if (!hotAPI.compatible) return
 	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord("data-v-37cc8005", __vue_options__)
+	    hotAPI.createRecord("data-v-7fe49234", __vue_options__)
 	  } else {
-	    hotAPI.reload("data-v-37cc8005", __vue_options__)
+	    hotAPI.reload("data-v-7fe49234", __vue_options__)
 	  }
 	})()}
 	if (__vue_options__.functional) {console.error("[vue-loader] menu-item.vue: functional components are not supported and should be defined in plain js files using render functions.")}
@@ -2338,16 +2362,16 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 78 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._c;
+	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
 	  return _c('li', {
 	    staticClass: "mdl-menu__item"
-	  }, [_vm._t("default")], true)
+	  }, [_vm._t("default")], 2)
 	},staticRenderFns: []}
 	module.exports.render._withStripped = true
 	if (false) {
 	  module.hot.accept()
 	  if (module.hot.data) {
-	     require("vue-hot-reload-api").rerender("data-v-37cc8005", module.exports)
+	     require("vue-hot-reload-api").rerender("data-v-7fe49234", module.exports)
 	  }
 	}
 
@@ -2374,7 +2398,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	if (typeof __vue_options__ === "function") {
 	  __vue_options__ = __vue_options__.options
 	}
-	__vue_options__.__file = "/Users/posva/vue-mdl/src/card.vue"
+	__vue_options__.__file = "F:\\programming\\github\\vue-mdl\\src\\card.vue"
 	__vue_options__.render = __vue_template__.render
 	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 	
@@ -2385,9 +2409,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	  if (!hotAPI.compatible) return
 	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord("data-v-46fd66f8", __vue_options__)
+	    hotAPI.createRecord("data-v-20ba03f2", __vue_options__)
 	  } else {
-	    hotAPI.reload("data-v-46fd66f8", __vue_options__)
+	    hotAPI.reload("data-v-20ba03f2", __vue_options__)
 	  }
 	})()}
 	if (__vue_options__.functional) {console.error("[vue-loader] card.vue: functional components are not supported and should be defined in plain js files using render functions.")}
@@ -2471,7 +2495,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 81 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._c;
+	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
 	  return _c('div', {
 	    staticClass: "mdl-card mdl-shadow--2dp"
 	  }, [(_vm.title) ? _vm._t("title", [_c('div', {
@@ -2507,7 +2531,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        _vm.triggerActionsEvent($event)
 	      }
 	    }
-	  }, [_vm._v(_vm._s(_vm.actionsText))])])]) : _vm._e(), (_vm.menu) ? _vm._t("menu", [_c('div', {
+	  }, [_vm._v(_vm._s(_vm.actionsText))])], 1)]) : _vm._e(), (_vm.menu) ? _vm._t("menu", [_c('div', {
 	    staticClass: "mdl-card__menu"
 	  }, [_c('mdl-button', {
 	    staticClass: "mdl-js-ripple-effect",
@@ -2521,13 +2545,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }
 	  }, [_c('i', {
 	    staticClass: "material-icons"
-	  }, [_vm._v("share")])])])]) : _vm._e()], true)
+	  }, [_vm._v("share")])])], 1)]) : _vm._e()], 2)
 	},staticRenderFns: []}
 	module.exports.render._withStripped = true
 	if (false) {
 	  module.hot.accept()
 	  if (module.hot.data) {
-	     require("vue-hot-reload-api").rerender("data-v-46fd66f8", module.exports)
+	     require("vue-hot-reload-api").rerender("data-v-20ba03f2", module.exports)
 	  }
 	}
 
@@ -2554,7 +2578,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	if (typeof __vue_options__ === "function") {
 	  __vue_options__ = __vue_options__.options
 	}
-	__vue_options__.__file = "/Users/posva/vue-mdl/src/snackbar.vue"
+	__vue_options__.__file = "F:\\programming\\github\\vue-mdl\\src\\snackbar.vue"
 	__vue_options__.render = __vue_template__.render
 	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 	
@@ -2565,9 +2589,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	  if (!hotAPI.compatible) return
 	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord("data-v-b5ac2c0e", __vue_options__)
+	    hotAPI.createRecord("data-v-263d3a67", __vue_options__)
 	  } else {
-	    hotAPI.reload("data-v-b5ac2c0e", __vue_options__)
+	    hotAPI.reload("data-v-263d3a67", __vue_options__)
 	  }
 	})()}
 	if (__vue_options__.functional) {console.error("[vue-loader] snackbar.vue: functional components are not supported and should be defined in plain js files using render functions.")}
@@ -2612,9 +2636,9 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 84 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._c;
+	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
 	  return _vm._m(0)
-	},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._c;
+	},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
 	  return _c('div', {
 	    staticClass: "mdl-snackbar mdl-js-snackbar",
 	    attrs: {
@@ -2635,7 +2659,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	if (false) {
 	  module.hot.accept()
 	  if (module.hot.data) {
-	     require("vue-hot-reload-api").rerender("data-v-b5ac2c0e", module.exports)
+	     require("vue-hot-reload-api").rerender("data-v-263d3a67", module.exports)
 	  }
 	}
 
@@ -2665,7 +2689,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	if (typeof __vue_options__ === "function") {
 	  __vue_options__ = __vue_options__.options
 	}
-	__vue_options__.__file = "/Users/posva/vue-mdl/src/select.vue"
+	__vue_options__.__file = "F:\\programming\\github\\vue-mdl\\src\\select.vue"
 	__vue_options__.render = __vue_template__.render
 	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 	
@@ -2676,9 +2700,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	  if (!hotAPI.compatible) return
 	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord("data-v-76dce970", __vue_options__)
+	    hotAPI.createRecord("data-v-e0750544", __vue_options__)
 	  } else {
-	    hotAPI.reload("data-v-76dce970", __vue_options__)
+	    hotAPI.reload("data-v-e0750544", __vue_options__)
 	  }
 	})()}
 	if (__vue_options__.functional) {console.error("[vue-loader] select.vue: functional components are not supported and should be defined in plain js files using render functions.")}
@@ -2702,8 +2726,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../node_modules/css-loader/index.js!./../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-76dce970!./../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./select.vue", function() {
-				var newContent = require("!!./../node_modules/css-loader/index.js!./../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-76dce970!./../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./select.vue");
+			module.hot.accept("!!./../node_modules/css-loader/index.js!./../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-e0750544!./../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./select.vue", function() {
+				var newContent = require("!!./../node_modules/css-loader/index.js!./../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-e0750544!./../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./select.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -2721,7 +2745,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	
 	// module
-	exports.push([module.id, "\n.getmdl-select .mdl-icon-toggle__label {\n  float: right;\n  margin-top: -30px;\n  color: rgba(0, 0, 0, 0.4);\n}\n.getmdl-select.is-focused .mdl-icon-toggle__label {\n  color: #3f51b5;\n}\n.getmdl-select .mdl-menu__container {\n  width: 100% !important;\n  overflow: hidden;\n}\n.getmdl-select .mdl-menu__container .mdl-menu .mdl-menu__item {\n  font-size: 16px;\n}\n.getmdl-select .mdl-menu {\n  /* Remove the 2px border */\n  width: calc(100% - 2px);\n}\n.getmdl-select--fixed-height .mdl-menu__container {\n  overflow-y: auto;\n  max-height: 300px !important;\n}\n", ""]);
+	exports.push([module.id, "\n.getmdl-select .mdl-icon-toggle__label {\r\n  float: right;\r\n  margin-top: -30px;\r\n  color: rgba(0, 0, 0, 0.4);\n}\n.getmdl-select.is-focused .mdl-icon-toggle__label {\r\n  color: #3f51b5;\n}\n.getmdl-select .mdl-menu__container {\r\n  width: 100% !important;\r\n  overflow: hidden;\n}\n.getmdl-select .mdl-menu__container .mdl-menu .mdl-menu__item {\r\n  font-size: 16px;\n}\n.getmdl-select .mdl-menu {\r\n  /* Remove the 2px border */\r\n  width: calc(100% - 2px);\n}\n.getmdl-select--fixed-height .mdl-menu__container {\r\n  overflow-y: auto;\r\n  max-height: 300px !important;\n}\r\n", ""]);
 	
 	// exports
 
@@ -3088,7 +3112,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 91 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._c;
+	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
 	  return _c('div', {
 	    ref: "textfield",
 	    staticClass: "mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select"
@@ -3151,7 +3175,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	if (false) {
 	  module.hot.accept()
 	  if (module.hot.data) {
-	     require("vue-hot-reload-api").rerender("data-v-76dce970", module.exports)
+	     require("vue-hot-reload-api").rerender("data-v-e0750544", module.exports)
 	  }
 	}
 
@@ -3181,7 +3205,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	if (typeof __vue_options__ === "function") {
 	  __vue_options__ = __vue_options__.options
 	}
-	__vue_options__.__file = "/Users/posva/vue-mdl/src/dialog.vue"
+	__vue_options__.__file = "F:\\programming\\github\\vue-mdl\\src\\dialog.vue"
 	__vue_options__.render = __vue_template__.render
 	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 	
@@ -3192,9 +3216,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	  if (!hotAPI.compatible) return
 	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord("data-v-f1faa888", __vue_options__)
+	    hotAPI.createRecord("data-v-c02980ac", __vue_options__)
 	  } else {
-	    hotAPI.reload("data-v-f1faa888", __vue_options__)
+	    hotAPI.reload("data-v-c02980ac", __vue_options__)
 	  }
 	})()}
 	if (__vue_options__.functional) {console.error("[vue-loader] dialog.vue: functional components are not supported and should be defined in plain js files using render functions.")}
@@ -3218,8 +3242,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../node_modules/css-loader/index.js!./../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-f1faa888!./../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./dialog.vue", function() {
-				var newContent = require("!!./../node_modules/css-loader/index.js!./../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-f1faa888!./../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./dialog.vue");
+			module.hot.accept("!!./../node_modules/css-loader/index.js!./../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-c02980ac!./../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./dialog.vue", function() {
+				var newContent = require("!!./../node_modules/css-loader/index.js!./../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-c02980ac!./../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./dialog.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -3237,7 +3261,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	
 	// module
-	exports.push([module.id, "\n.mdl-dialog-container {\n  position: fixed;\n  width: 100%;\n  height: 100%;\n  display: flex;\n  flex-wrap: wrap;\n  justify-content:center;\n  align-items: center;\n  top:0;\n  left: 0;\n  z-index: 10000;\n  background: rgba(0,0,0,0.3);\n}\n.mdl-dialog-container .mdl-dialog {\n  background-color:white;\n  padding: 1em;\n  color: black;\n  width: initial;\n  min-width: 280px;\n}\n", ""]);
+	exports.push([module.id, "\n.mdl-dialog-container {\r\n  position: fixed;\r\n  width: 100%;\r\n  height: 100%;\r\n  display: flex;\r\n  flex-wrap: wrap;\r\n  justify-content:center;\r\n  align-items: center;\r\n  top:0;\r\n  left: 0;\r\n  z-index: 10000;\r\n  background: rgba(0,0,0,0.3);\n}\n.mdl-dialog-container .mdl-dialog {\r\n  background-color:white;\r\n  padding: 1em;\r\n  color: black;\r\n  width: initial;\r\n  min-width: 280px;\n}\r\n", ""]);
 	
 	// exports
 
@@ -3639,7 +3663,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 98 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._c;
+	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
 	  return _c('div', {
 	    directives: [{
 	      name: "show",
@@ -3654,7 +3678,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    staticClass: "mdl-dialog__title"
 	  }, [_vm._v(_vm._s(_vm.title))]), _vm._v(" "), _c('div', {
 	    staticClass: "mdl-dialog__content"
-	  }, [_vm._t("default")], true), _vm._v(" "), _c('div', {
+	  }, [_vm._t("default")], 2), _vm._v(" "), _c('div', {
 	    staticClass: "mdl-dialog__actions",
 	    class: _vm.actionsClasses
 	  }, [_vm._t("actions", [_c('mdl-button', {
@@ -3665,13 +3689,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	        _vm.close($event)
 	      }
 	    }
-	  }, [_vm._v("Close")])])], true)])])
+	  }, [_vm._v("Close")])])], 2)])])
 	},staticRenderFns: []}
 	module.exports.render._withStripped = true
 	if (false) {
 	  module.hot.accept()
 	  if (module.hot.data) {
-	     require("vue-hot-reload-api").rerender("data-v-f1faa888", module.exports)
+	     require("vue-hot-reload-api").rerender("data-v-c02980ac", module.exports)
 	  }
 	}
 
@@ -3698,7 +3722,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	if (typeof __vue_options__ === "function") {
 	  __vue_options__ = __vue_options__.options
 	}
-	__vue_options__.__file = "/Users/posva/vue-mdl/src/tabs/tabs.vue"
+	__vue_options__.__file = "F:\\programming\\github\\vue-mdl\\src\\tabs\\tabs.vue"
 	__vue_options__.render = __vue_template__.render
 	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 	
@@ -3709,9 +3733,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	  if (!hotAPI.compatible) return
 	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord("data-v-4b9415aa", __vue_options__)
+	    hotAPI.createRecord("data-v-e8d794ac", __vue_options__)
 	  } else {
-	    hotAPI.reload("data-v-4b9415aa", __vue_options__)
+	    hotAPI.reload("data-v-e8d794ac", __vue_options__)
 	  }
 	})()}
 	if (__vue_options__.functional) {console.error("[vue-loader] tabs.vue: functional components are not supported and should be defined in plain js files using render functions.")}
@@ -3814,7 +3838,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	if (typeof __vue_options__ === "function") {
 	  __vue_options__ = __vue_options__.options
 	}
-	__vue_options__.__file = "/Users/posva/vue-mdl/src/tabs/tab-link.vue"
+	__vue_options__.__file = "F:\\programming\\github\\vue-mdl\\src\\tabs\\tab-link.vue"
 	__vue_options__.render = __vue_template__.render
 	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 	
@@ -3825,9 +3849,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	  if (!hotAPI.compatible) return
 	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord("data-v-192c3c5f", __vue_options__)
+	    hotAPI.createRecord("data-v-7868255e", __vue_options__)
 	  } else {
-	    hotAPI.reload("data-v-192c3c5f", __vue_options__)
+	    hotAPI.reload("data-v-7868255e", __vue_options__)
 	  }
 	})()}
 	if (__vue_options__.functional) {console.error("[vue-loader] tab-link.vue: functional components are not supported and should be defined in plain js files using render functions.")}
@@ -3860,7 +3884,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 103 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._c;
+	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
 	  return _c('a', {
 	    staticClass: "mdl-tabs__tab",
 	    attrs: {
@@ -3883,7 +3907,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	if (false) {
 	  module.hot.accept()
 	  if (module.hot.data) {
-	     require("vue-hot-reload-api").rerender("data-v-192c3c5f", module.exports)
+	     require("vue-hot-reload-api").rerender("data-v-7868255e", module.exports)
 	  }
 	}
 
@@ -3891,7 +3915,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 104 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._c;
+	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
 	  return _c('div', {
 	    staticClass: "mdl-tabs is-upgraded"
 	  }, [_c('div', {
@@ -3913,13 +3937,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	        }
 	      }
 	    })
-	  })), _vm._v(" "), _vm._v(" "), _vm._t("default")], true)
+	  })), _vm._v(" "), _vm._t("default")], 2)
 	},staticRenderFns: []}
 	module.exports.render._withStripped = true
 	if (false) {
 	  module.hot.accept()
 	  if (module.hot.data) {
-	     require("vue-hot-reload-api").rerender("data-v-4b9415aa", module.exports)
+	     require("vue-hot-reload-api").rerender("data-v-e8d794ac", module.exports)
 	  }
 	}
 
@@ -3946,7 +3970,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	if (typeof __vue_options__ === "function") {
 	  __vue_options__ = __vue_options__.options
 	}
-	__vue_options__.__file = "/Users/posva/vue-mdl/src/tabs/tab.vue"
+	__vue_options__.__file = "F:\\programming\\github\\vue-mdl\\src\\tabs\\tab.vue"
 	__vue_options__.render = __vue_template__.render
 	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 	
@@ -3957,9 +3981,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	  if (!hotAPI.compatible) return
 	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord("data-v-9751ea10", __vue_options__)
+	    hotAPI.createRecord("data-v-77ff3e99", __vue_options__)
 	  } else {
-	    hotAPI.reload("data-v-9751ea10", __vue_options__)
+	    hotAPI.reload("data-v-77ff3e99", __vue_options__)
 	  }
 	})()}
 	if (__vue_options__.functional) {console.error("[vue-loader] tab.vue: functional components are not supported and should be defined in plain js files using render functions.")}
@@ -4122,19 +4146,19 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 114 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._c;
+	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
 	  return _c('div', {
 	    staticClass: "mdl-tabs__panel",
 	    class: {
 	      'is-active': _vm.selected
 	    }
-	  }, [_vm._t("default")], true)
+	  }, [_vm._t("default")], 2)
 	},staticRenderFns: []}
 	module.exports.render._withStripped = true
 	if (false) {
 	  module.hot.accept()
 	  if (module.hot.data) {
-	     require("vue-hot-reload-api").rerender("data-v-9751ea10", module.exports)
+	     require("vue-hot-reload-api").rerender("data-v-77ff3e99", module.exports)
 	  }
 	}
 
@@ -4161,7 +4185,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	if (typeof __vue_options__ === "function") {
 	  __vue_options__ = __vue_options__.options
 	}
-	__vue_options__.__file = "/Users/posva/vue-mdl/src/chip.vue"
+	__vue_options__.__file = "F:\\programming\\github\\vue-mdl\\src\\chip.vue"
 	__vue_options__.render = __vue_template__.render
 	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 	
@@ -4172,9 +4196,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	  if (!hotAPI.compatible) return
 	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord("data-v-401a67c0", __vue_options__)
+	    hotAPI.createRecord("data-v-f759c1a4", __vue_options__)
 	  } else {
-	    hotAPI.reload("data-v-401a67c0", __vue_options__)
+	    hotAPI.reload("data-v-f759c1a4", __vue_options__)
 	  }
 	})()}
 	if (__vue_options__.functional) {console.error("[vue-loader] chip.vue: functional components are not supported and should be defined in plain js files using render functions.")}
@@ -4224,7 +4248,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 117 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._c;
+	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
 	  return _c('span', {
 	    staticClass: "mdl-chip",
 	    class: _vm.chipClasses
@@ -4237,7 +4261,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }
 	  }) : _vm._e()]), _vm._v(" "), _c('span', {
 	    staticClass: "mdl-chip__text"
-	  }, [_vm._t("default")], true), _vm._v(" "), (_vm.deletable) ? _c('a', {
+	  }, [_vm._t("default")], 2), _vm._v(" "), (_vm.deletable) ? _c('a', {
 	    staticClass: "mdl-chip__action",
 	    attrs: {
 	      "href": "#"
@@ -4250,13 +4274,353 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }
 	  }, [_c('i', {
 	    staticClass: "material-icons"
-	  }, [_vm._v(_vm._s(_vm.deleteIcon))])]) : _vm._e()], true)
+	  }, [_vm._v(_vm._s(_vm.deleteIcon))])]) : _vm._e()], 2)
 	},staticRenderFns: []}
 	module.exports.render._withStripped = true
 	if (false) {
 	  module.hot.accept()
 	  if (module.hot.data) {
-	     require("vue-hot-reload-api").rerender("data-v-401a67c0", module.exports)
+	     require("vue-hot-reload-api").rerender("data-v-f759c1a4", module.exports)
+	  }
+	}
+
+/***/ },
+/* 118 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_exports__, __vue_options__
+	var __vue_styles__ = {}
+	
+	/* script */
+	__vue_exports__ = __webpack_require__(119)
+	
+	/* template */
+	var __vue_template__ = __webpack_require__(120)
+	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
+	if (
+	  typeof __vue_exports__.default === "object" ||
+	  typeof __vue_exports__.default === "function"
+	) {
+	if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
+	__vue_options__ = __vue_exports__ = __vue_exports__.default
+	}
+	if (typeof __vue_options__ === "function") {
+	  __vue_options__ = __vue_options__.options
+	}
+	__vue_options__.__file = "F:\\programming\\github\\vue-mdl\\src\\layout\\layout.vue"
+	__vue_options__.render = __vue_template__.render
+	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
+	
+	/* hot reload */
+	if (false) {(function () {
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), false)
+	  if (!hotAPI.compatible) return
+	  module.hot.accept()
+	  if (!module.hot.data) {
+	    hotAPI.createRecord("data-v-19b721aa", __vue_options__)
+	  } else {
+	    hotAPI.reload("data-v-19b721aa", __vue_options__)
+	  }
+	})()}
+	if (__vue_options__.functional) {console.error("[vue-loader] layout.vue: functional components are not supported and should be defined in plain js files using render functions.")}
+	
+	module.exports = __vue_exports__
+
+
+/***/ },
+/* 119 */
+/***/ function(module, exports) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.default = {
+	  computed: {
+	    layoutClasses: function layoutClasses() {
+	      return {
+	        'mdl-layout--fixed-header': this.isFixed,
+	        'mdl-layout--fixed-drawer': this.fixedDrawer
+	      };
+	    },
+	    headerClasses: function headerClasses() {
+	      return {
+	        'mdl-layout__header--scroll': !this.isFixed,
+	        'mdl-layout__header--waterfall': this.waterfall,
+	        'mdl-layout__header--transparent': this.transparentHeader
+	      };
+	    },
+	    isFixed: function isFixed() {
+	      return this.fixedHeader || this.fixedDrawer || this.waterfall;
+	    }
+	  },
+	
+	  props: {
+	    fixedHeader: Boolean,
+	    fixedDrawer: Boolean,
+	    transparentHeader: Boolean,
+	    waterfall: Boolean
+	  },
+	  data: function data() {
+	    return {
+	      selected: null
+	    };
+	  },
+	  mounted: function mounted() {
+	    componentHandler.upgradeElement(this.$el);
+	  },
+	
+	
+	  watch: {
+	    isFixed: function isFixed(_isFixed) {
+	      var action = _isFixed ? 'remove' : 'add';
+	      if (this.$el.parentElement) {
+	        this.$el.parentElement.classList[action]('has-scrolling-header');
+	      }
+	    }
+	  }
+	};
+
+/***/ },
+/* 120 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return _c('div', {
+	    staticClass: "mdl-layout mdl-js-layout",
+	    class: _vm.layoutClasses
+	  }, [_c('header', {
+	    staticClass: "mdl-layout__header",
+	    class: _vm.headerClasses
+	  }, [_vm._t("header")], 2), _vm._v(" "), _vm._t("default")], 2)
+	},staticRenderFns: []}
+	module.exports.render._withStripped = true
+	if (false) {
+	  module.hot.accept()
+	  if (module.hot.data) {
+	     require("vue-hot-reload-api").rerender("data-v-19b721aa", module.exports)
+	  }
+	}
+
+/***/ },
+/* 121 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_exports__, __vue_options__
+	var __vue_styles__ = {}
+	
+	/* script */
+	__vue_exports__ = __webpack_require__(122)
+	
+	/* template */
+	var __vue_template__ = __webpack_require__(123)
+	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
+	if (
+	  typeof __vue_exports__.default === "object" ||
+	  typeof __vue_exports__.default === "function"
+	) {
+	if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
+	__vue_options__ = __vue_exports__ = __vue_exports__.default
+	}
+	if (typeof __vue_options__ === "function") {
+	  __vue_options__ = __vue_options__.options
+	}
+	__vue_options__.__file = "F:\\programming\\github\\vue-mdl\\src\\layout\\header-row.vue"
+	__vue_options__.render = __vue_template__.render
+	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
+	
+	/* hot reload */
+	if (false) {(function () {
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), false)
+	  if (!hotAPI.compatible) return
+	  module.hot.accept()
+	  if (!module.hot.data) {
+	    hotAPI.createRecord("data-v-ba1d85cc", __vue_options__)
+	  } else {
+	    hotAPI.reload("data-v-ba1d85cc", __vue_options__)
+	  }
+	})()}
+	if (__vue_options__.functional) {console.error("[vue-loader] header-row.vue: functional components are not supported and should be defined in plain js files using render functions.")}
+	
+	module.exports = __vue_exports__
+
+
+/***/ },
+/* 122 */
+/***/ function(module, exports) {
+
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.default = {
+	  props: {
+	    title: [Boolean, String]
+	  },
+	  mounted: function mounted() {
+	    componentHandler.upgradeElement(this.$el);
+	  }
+	};
+
+/***/ },
+/* 123 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return _c('div', {
+	    staticClass: "mdl-layout__header-row"
+	  }, [(_vm.title) ? _c('span', {
+	    staticClass: "mdl-layout-title"
+	  }, [_vm._v(_vm._s(_vm.title))]) : _vm._e(), _vm._v(" "), _vm._t("default")], 2)
+	},staticRenderFns: []}
+	module.exports.render._withStripped = true
+	if (false) {
+	  module.hot.accept()
+	  if (module.hot.data) {
+	     require("vue-hot-reload-api").rerender("data-v-ba1d85cc", module.exports)
+	  }
+	}
+
+/***/ },
+/* 124 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_exports__, __vue_options__
+	var __vue_styles__ = {}
+	
+	/* script */
+	__vue_exports__ = __webpack_require__(125)
+	
+	/* template */
+	var __vue_template__ = __webpack_require__(126)
+	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
+	if (
+	  typeof __vue_exports__.default === "object" ||
+	  typeof __vue_exports__.default === "function"
+	) {
+	if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
+	__vue_options__ = __vue_exports__ = __vue_exports__.default
+	}
+	if (typeof __vue_options__ === "function") {
+	  __vue_options__ = __vue_options__.options
+	}
+	__vue_options__.__file = "F:\\programming\\github\\vue-mdl\\src\\layout\\drawer.vue"
+	__vue_options__.render = __vue_template__.render
+	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
+	
+	/* hot reload */
+	if (false) {(function () {
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), false)
+	  if (!hotAPI.compatible) return
+	  module.hot.accept()
+	  if (!module.hot.data) {
+	    hotAPI.createRecord("data-v-1ea2e3f1", __vue_options__)
+	  } else {
+	    hotAPI.reload("data-v-1ea2e3f1", __vue_options__)
+	  }
+	})()}
+	if (__vue_options__.functional) {console.error("[vue-loader] drawer.vue: functional components are not supported and should be defined in plain js files using render functions.")}
+	
+	module.exports = __vue_exports__
+
+
+/***/ },
+/* 125 */
+/***/ function(module, exports) {
+
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.default = {
+	  props: {
+	    title: [Boolean, String]
+	  },
+	  mounted: function mounted() {
+	    componentHandler.upgradeElement(this.$el);
+	  }
+	};
+
+/***/ },
+/* 126 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return _c('div', {
+	    staticClass: "mdl-layout__drawer"
+	  }, [(_vm.title) ? _c('span', {
+	    staticClass: "mdl-layout-title"
+	  }, [_vm._v(_vm._s(_vm.title))]) : _vm._e(), _vm._v(" "), _vm._t("default")], 2)
+	},staticRenderFns: []}
+	module.exports.render._withStripped = true
+	if (false) {
+	  module.hot.accept()
+	  if (module.hot.data) {
+	     require("vue-hot-reload-api").rerender("data-v-1ea2e3f1", module.exports)
+	  }
+	}
+
+/***/ },
+/* 127 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_exports__, __vue_options__
+	var __vue_styles__ = {}
+	
+	/* template */
+	var __vue_template__ = __webpack_require__(128)
+	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
+	if (
+	  typeof __vue_exports__.default === "object" ||
+	  typeof __vue_exports__.default === "function"
+	) {
+	if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
+	__vue_options__ = __vue_exports__ = __vue_exports__.default
+	}
+	if (typeof __vue_options__ === "function") {
+	  __vue_options__ = __vue_options__.options
+	}
+	__vue_options__.__file = "F:\\programming\\github\\vue-mdl\\src\\layout\\content.vue"
+	__vue_options__.render = __vue_template__.render
+	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
+	
+	/* hot reload */
+	if (false) {(function () {
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), false)
+	  if (!hotAPI.compatible) return
+	  module.hot.accept()
+	  if (!module.hot.data) {
+	    hotAPI.createRecord("data-v-de95f2ae", __vue_options__)
+	  } else {
+	    hotAPI.reload("data-v-de95f2ae", __vue_options__)
+	  }
+	})()}
+	if (__vue_options__.functional) {console.error("[vue-loader] content.vue: functional components are not supported and should be defined in plain js files using render functions.")}
+	
+	module.exports = __vue_exports__
+
+
+/***/ },
+/* 128 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return _c('main', {
+	    staticClass: "mdl-layout__content"
+	  }, [_vm._t("default")], 2)
+	},staticRenderFns: []}
+	module.exports.render._withStripped = true
+	if (false) {
+	  module.hot.accept()
+	  if (module.hot.data) {
+	     require("vue-hot-reload-api").rerender("data-v-de95f2ae", module.exports)
 	  }
 	}
 
